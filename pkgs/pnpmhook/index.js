@@ -20,7 +20,7 @@ if (!PNPMHOOK_BYPASS) {
     lockfile: "pnpm-lock.yaml",
     command: "pnpm",
     version: ">=3",
-    arguments: ["install", "--prefer-offline", "--prefer-frozen-lockfile", "--no-optional"]
+    arguments: ["install", "--prefer-offline", "--prefer-frozen-lockfile"]
   };
 
   if (PNPMHOOK_DEBUG) {
