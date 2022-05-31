@@ -1,6 +1,6 @@
 {
   "name": "pnpmhook",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A fork of yarnhook that works with pnpm v7 to run `pnpm install` automatically on git hooks",
   "keywords": [
     "pnpm",
