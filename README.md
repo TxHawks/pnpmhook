@@ -1,63 +1,46 @@
-# yarnhook [![npm version](https://badge.fury.io/js/yarnhook.svg)](https://badge.fury.io/js/yarnhook)
+# pnpmhook
 
-![yarnhook](/logo.svg)
+> A sloppy fork of [yarnhook](https://github.com/frontsideair/yarnhook) which supports pnpm v7 and
+> removes support for other package managers
 
-`yarnhook` keeps your `node_modules` up-to-date when your `yarn.lock`, `package-lock.json` or
-`shrinkwrap.yaml` changes due to git operations like `checkout`, `merge`, `rebase`, `pull` etc.
+`pnpmhook` keeps your `node_modules` up-to-date when your `pnpm-lock.yaml` changes due to git
+operations like `checkout`, `merge`, `rebase`, `pull` etc.
 
-# Easy installation
-
-You can install `yarnhook` to your project with [mrm](https://mrm.js.org/).
-
-```sh
-npx mrm yarnhook
-```
-
-# Manual installation
+## Installation
 
 This package should be used with [husky](https://www.npmjs.com/package/husky).
 
 ```sh
-yarn add --dev yarnhook husky
-# or
-npm install --save-dev yarnhook husky
-# or
-pnpm install --save-dev yarnhook husky
+pnpm install --save-dev pnpmhook husky
 ```
 
 ## Configuration
 
-You should let `yarnhook` handle git hooks that change the dependencies. Example `package.json` is
+You should let `pnpmhook` handle git hooks that change the dependencies. Example `package.json` is
 as follows:
 
 ```json
 {
   "husky": {
     "hooks": {
-      "post-checkout": "yarnhook",
-      "post-merge": "yarnhook",
-      "post-rewrite": "yarnhook"
+      "post-checkout": "pnpmhook",
+      "post-merge": "pnpmhook",
+      "post-rewrite": "pnpmhook"
     }
   }
 }
 ```
 
-# Flags
+## Flags
 
 Prepend these flags to your git command to use them.
 
-* `YARNHOOK_BYPASS`: Run git command bypassing yarnhook completely
-* `YARNHOOK_DEBUG`: Print debug information
-* `YARNHOOK_DRYRUN`: Don't install dependencies, only notify
+- `PNPMHOOK_BYPASS`: Run git command bypassing pnpnmhook completely
+- `PNPMHOOK_DEBUG`: Print debug information
+- `PNPMHOOK_DRYRUN`: Don't install dependencies, only notify
 
 An example:
 
 ```sh
-YARNHOOK_BYPASS=true git checkout feature-branch
+PNPMHOOK_BYPASS=true git checkout feature-branch
 ```
-
-# Artwork
-
-Project logo: @anilkilic
-
-Font: PT Sans

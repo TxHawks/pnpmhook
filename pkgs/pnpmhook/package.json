@@ -1,0 +1,27 @@
+{
+  "name": "pnpmhook",
+  "version": "0.1.0",
+  "description": "A fork of yarnhook that works with pnpm v7 to run `pnpm install` automatically on git hooks",
+  "keywords": [
+    "pnpm",
+    "githooks"
+  ],
+  "author": "Fatih Altinok <photonia@gmail.com>",
+  "homepage": "https://github.com/TxHawks/pnpmhook/tree/main/pkgs/pnpmhook#readme",
+  "license": "MIT",
+  "bin": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TxHawks/pnpmhook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TxHawks/pnpmhook/issues"
+  },
+  "dependencies": {
+    "execa": "^4.0.3",
+    "find-parent-dir": "^0.3.0"
+  }
+}
